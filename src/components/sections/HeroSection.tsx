@@ -82,7 +82,7 @@ const HeroSection: FC<HeroProps> = ({ onNavigate }) => {
             animation: "fadeUp 0.6s ease forwards",
           }}
         >
-          GRADUATE RESEARCHER · SEOUL, KR
+          FULL STACK DEVELOPER · DAEJEON, KR
         </div>
 
         {/* Glitch title */}

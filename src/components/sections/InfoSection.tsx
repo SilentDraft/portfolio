@@ -21,7 +21,7 @@ const profile = [
   { label: "NAME", value: "김태호 (Kim Taeho)" },
   { label: "ROLE", value: "풀스택 개발자 & 대학원 연구자" },
   { label: "FOCUS", value: "백엔드 · 모바일 · AI/ML" },
-  { label: "LOCATION", value: "서울, 대한민국" },
+  { label: "LOCATION", value: "대전광역시, 대한민국" },
 ];
 
 const InfoSection: FC = () => {
@@ -116,13 +116,13 @@ const InfoSection: FC = () => {
           {/* Quote / Philosophy */}
           <div
             style={{
-              marginTop: "auto",
-              paddingTop: 32,
+              marginTop: 32,
               borderLeft: `2px solid ${ACCENT}`,
               paddingLeft: 20,
+              overflow: "hidden",
             }}
           >
-            <p style={{ fontFamily: FONTS.sans, fontSize: 15, color: MUTED, lineHeight: 1.8, fontWeight: 300, margin: 0 }}>
+            <p style={{ fontFamily: FONTS.sans, fontSize: "clamp(13px, 1.5vw, 15px)", color: MUTED, lineHeight: 1.8, fontWeight: 300, margin: 0, wordBreak: "keep-all" }}>
               "만들고 싶은 건 직접 만든다.
               <br />
               생각을 코드로 옮기는 과정이 가장 즐겁습니다."

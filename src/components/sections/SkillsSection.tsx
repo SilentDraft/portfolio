@@ -1,6 +1,7 @@
 import { FC, MouseEvent } from "react";
 import { ACCENT, SURFACE, BORDER, TEXT, MUTED, FONTS } from "../../constants/theme";
-import { skills, skillBars } from "../../constants/data";
+import { skills, skillBars, CODING_SINCE } from "../../constants/data";
+import { useGitHubRepos } from "../../hooks/useGitHubRepos";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 const coreStacks = [
@@ -12,6 +13,8 @@ const coreStacks = [
 
 const SkillsSection: FC = () => {
   const { isMobile } = useBreakpoint();
+  const projectCount = useGitHubRepos();
+  const yearsExp = `${new Date().getFullYear() - CODING_SINCE}+`;
 
   return (
     <section
@@ -99,7 +102,7 @@ const SkillsSection: FC = () => {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: "auto", paddingTop: 24 }}>
-            {[{ num: "4+", label: "YEARS EXP" }, { num: "10+", label: "PROJECTS" }, { num: "2+", label: "INTERNSHIPS" }, { num: "1", label: "HACKATHON" }].map(({ num, label }) => (
+            {[{ num: yearsExp, label: "YEARS EXP" }, { num: projectCount, label: "PROJECTS" }, { num: "9+", label: "TECH STACKS" }, { num: "6+", label: "LANGUAGES" }].map(({ num, label }) => (
               <div key={label} style={{ padding: "20px", border: `1px solid ${BORDER}` }}>
                 <span style={{ fontFamily: FONTS.display, fontSize: 40, color: ACCENT, lineHeight: 1, letterSpacing: -1, display: "block" }}>{num}</span>
                 <span style={{ fontFamily: FONTS.mono, fontSize: 10, color: MUTED, letterSpacing: 2 }}>{label}</span>

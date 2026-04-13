@@ -1,12 +1,14 @@
 import type { Project, ContactItem, SkillBar } from "../types";
 
+export const CODING_SINCE = 2021;
+
 export const OWNER = {
   name: "KIM TAEHO",
   nameFirst: "KIM",
   nameLast: "TAEHO",
   role: "FULL STACK DEVELOPER",
-  location: "SEOUL, KR",
-  year: "2026",
+  location: "DAEJEON, KR",
+  year: String(new Date().getFullYear()),
 } as const;
 
 export const projects: Project[] = [
@@ -16,7 +18,7 @@ export const projects: Project[] = [
     desc: "GitHub 활동 기반 펫 육성 앱. XP 누적 → 5단계 진화 / 방 꾸미기 / 코인 상점.",
     role: "풀스택",
     stack: ["Flutter", "Supabase", "Deno", "PostgreSQL"],
-    year: "2026",
+    year: "2026 (진행중)",
     link: "#",
   },
   {
@@ -81,14 +83,6 @@ export const projects: Project[] = [
     year: "2022",
     link: "#",
   },
-  {
-    num: "09",
-    name: "현관문 방범장치",
-    desc: "문 센서 감지 → Home Assistant 자동화로 스마트폰 푸시 알림 발송.",
-    stack: ["HAOS", "ESP8266", "Raspberry Pi"],
-    year: "2021",
-    link: "#",
-  },
 ];
 
 export const skills: string[] = [
@@ -104,8 +98,8 @@ export const skillBars: SkillBar[] = [
 ];
 
 export const contactItems: ContactItem[] = [
-  { label: "EMAIL",    value: "hello@kimtaeho.dev",        href: "mailto:hello@kimtaeho.dev" },
-  { label: "GITHUB",   value: "github.com/rlaxogh5079",   href: "https://github.com/rlaxogh5079" },
+  { label: "EMAIL",    value: "rlaxogh507906@gmail.com",    href: "mailto:rlaxogh507906@gmail.com" },
+  { label: "GITHUB",   value: "github.com/SilentDraft",   href: "https://github.com/SilentDraft" },
 ];
 
 export const navSections = ["ABOUT", "INFO", "PROJECTS", "SKILLS", "CONTACT"] as const;
