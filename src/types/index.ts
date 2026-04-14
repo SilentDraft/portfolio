@@ -1,3 +1,8 @@
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   num: string;
   name: string;
@@ -5,7 +10,8 @@ export interface Project {
   role?: string;
   stack: string[];
   year: string;
-  link: string;
+  links: ProjectLink[];
+  wip?: boolean;
 }
 
 export interface ContactItem {

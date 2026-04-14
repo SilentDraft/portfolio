@@ -18,8 +18,9 @@ export const projects: Project[] = [
     desc: "GitHub 활동 기반 펫 육성 앱. XP 누적 → 5단계 진화 / 방 꾸미기 / 코인 상점.",
     role: "풀스택",
     stack: ["Flutter", "Supabase", "Deno", "PostgreSQL"],
-    year: "2026 (진행중)",
-    link: "#",
+    year: "2026",
+    links: [],
+    wip: true,
   },
   {
     num: "02",
@@ -28,7 +29,7 @@ export const projects: Project[] = [
     role: "서버",
     stack: ["React Native", "PocketBase", "Python", "Docker"],
     year: "2025",
-    link: "#",
+    links: [{label: "SERVER", url: "https://github.com/SilentDraft/pcu-tashu-dev-server"}],
   },
   {
     num: "03",
@@ -37,7 +38,10 @@ export const projects: Project[] = [
     role: "풀스택",
     stack: ["Flutter", "FastAPI", "WebSocket"],
     year: "2025",
-    link: "#",
+    links: [
+      { label: "CLIENT", url: "https://github.com/SilentDraft/grandbuddy_client" },
+      { label: "SERVER", url: "https://github.com/SilentDraft/grandbuddy_server" },
+    ],
   },
   {
     num: "04",
@@ -46,7 +50,8 @@ export const projects: Project[] = [
     role: "클라이언트",
     stack: ["Flutter", "PocketBase", "Docker"],
     year: "2025",
-    link: "#",
+    links: [{ label: "CLIENT", url: "https://github.com/SilentDraft/TaskSpark_client" }, 
+    ],
   },
   {
     num: "05",
@@ -55,7 +60,9 @@ export const projects: Project[] = [
     role: "서버",
     stack: ["Flutter", "FastAPI", "SQLAlchemy"],
     year: "2024",
-    link: "#",
+    links: [{ label: "CLIENT", url: "https://github.com/SilentDraft/union_client" }, {
+      label: "SERVER", url: "https://github.com/SilentDraft/union_server "
+    }],
   },
   {
     num: "06",
@@ -64,7 +71,7 @@ export const projects: Project[] = [
     role: "서버",
     stack: ["Flask", "Docker", "BeautifulSoup4"],
     year: "2022",
-    link: "#",
+    links: [{ label: "SERVER", url: "https://github.com/SilentDraft/CherryPicker_back" }],
   },
   {
     num: "07",
@@ -73,7 +80,7 @@ export const projects: Project[] = [
     role: "서버",
     stack: ["Go", "Flutter", "Swagger"],
     year: "2022",
-    link: "#",
+    links: [{ label: "SERVER", url: "https://github.com/SilentDraft/5pplication_server" }],
   },
   {
     num: "08",
@@ -81,7 +88,7 @@ export const projects: Project[] = [
     desc: "네이버 부동산 데이터 수집 자동화. 에이프로코리아 인턴.",
     stack: ["Python", "Scrapy"],
     year: "2022",
-    link: "#",
+    links: [],
   },
 ];
 

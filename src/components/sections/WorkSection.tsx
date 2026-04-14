@@ -38,10 +38,8 @@ const WorkSection: FC = () => {
 
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((p, i) => (
-          <a
+          <div
             key={p.num}
-            href={p.link}
-            data-hover
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
             style={{
@@ -106,18 +104,66 @@ const WorkSection: FC = () => {
               </div>
             </div>
 
-            <span
+            <div
               style={{
-                fontFamily: FONTS.mono,
-                fontSize: 11,
-                color: MUTED,
-                letterSpacing: 1,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-end",
+                gap: 6,
                 whiteSpace: "nowrap",
               }}
             >
-              {p.year} ↗
-            </span>
-          </a>
+              <span
+                style={{
+                  fontFamily: FONTS.mono,
+                  fontSize: 11,
+                  color: MUTED,
+                  letterSpacing: 1,
+                }}
+              >
+                {p.year}
+              </span>
+              {p.wip ? (
+                <span
+                  style={{
+                    fontFamily: FONTS.mono,
+                    fontSize: 10,
+                    letterSpacing: 1,
+                    padding: "2px 8px",
+                    border: `1px dashed ${MUTED}`,
+                    color: MUTED,
+                  }}
+                >
+                  IN PROGRESS
+                </span>
+              ) : p.links.length > 0 && (
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "flex-end" }}>
+                  {p.links.map((l) => (
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-hover
+                      style={{
+                        fontFamily: FONTS.mono,
+                        fontSize: 10,
+                        letterSpacing: 1,
+                        padding: "2px 8px",
+                        border: `1px solid ${BORDER}`,
+                        color: hovered === i ? ACCENT : MUTED,
+                        textDecoration: "none",
+                        transition: "color 0.2s, border-color 0.2s",
+                        borderColor: hovered === i ? ACCENT : BORDER,
+                      }}
+                    >
+                      {l.label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         ))}
         <div style={{ borderTop: `1px solid ${BORDER}` }} />
       </div>
